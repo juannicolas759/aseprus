@@ -13,6 +13,7 @@
   nz-header {
     position: fixed;
     width: 100%;
+    z-index: 40;
   }
 
   [nz-menu] {
@@ -32,6 +33,7 @@
     background: #fff;
     padding: 24px;
     min-height: 380px;
+    z-index: 0;
   }
 
   nz-footer {

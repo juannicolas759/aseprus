@@ -1,8 +1,62 @@
 <div nz-row nzJustify="space-between" nzAlign="middle">
     <div nz-col nzSpan="12">
-        <p class="height-100"><img src="../assets/Imagen1.png" alt="logo"></p>
+        <p class="height-100"><img class="myImg" src="../assets/Imagen1.png" alt="logo"></p>
     </div>
     <div nz-col nzSpan="5">
-        <p class="height-50"><img src="../assets/Imagen2.png" alt="logo"></p>
+        <p class="height-50"><img class="myImg" src="../assets/Imagen2.png" alt="logo"></p>
+    </div>
+</div>
+<div nz-row nzJustify="space-between" nzAlign="middle">
+    <div nz-col nzSpan="18" nzOffset="3">
+        <nz-timeline>
+            <nz-timeline-item nzColor="green" *ngFor="let item of data">
+                <nz-list nzItemLayout="vertical">
+                    <nz-list-item>
+                        <nz-list-item-meta>
+                            <nz-list-item-meta-avatar [nzSrc]="item.avatar"></nz-list-item-meta-avatar>
+                            <nz-list-item-meta-title>
+                                <a href="{{ item.href }}">
+                                    <h1>{{ item.title }}</h1>
+                                </a>
+                            </nz-list-item-meta-title>
+                            <nz-list-item-meta-description>
+                                {{ item.description }}
+                            </nz-list-item-meta-description>
+                        </nz-list-item-meta>
+                        {{ item.content }}
+                        <ul nz-list-item-actions>
+                            <nz-list-item-action>
+                                <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
+
+                            </nz-list-item-action>
+                            <nz-list-item-action>
+                                <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
+
+                            </nz-list-item-action>
+                            <nz-list-item-action>
+                                <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
+
+                            </nz-list-item-action>
+                        </ul>
+                        <nz-list-item-extra>
+                            <img width="272" alt="imagenRefencia" src="{{item.image}}" />
+                        </nz-list-item-extra>
+                    </nz-list-item>
+                </nz-list>
+            </nz-timeline-item>
+            <nz-timeline-item nzColor="green">
+                <h1>OBJETIVOS</h1>
+                <nz-timeline>
+                    <nz-timeline-item nzColor="gray">1. Impulsar el campo boyacense y colombiano por medio de la
+                        planeación rural sostenible.</nz-timeline-item>
+                    <nz-timeline-item nzColor="gray">2. Brindar apoyo a personas, familias, empresas, instituciones y
+                        organismos gubernamentales en proyectos asociados con el sector agropecuario.</nz-timeline-item>
+                    <nz-timeline-item nzColor="gray">3. Generar empleos formales permanentes y temporales en la medida
+                        que cada proyecto lo requiera. </nz-timeline-item>
+                    <nz-timeline-item nzColor="gray">4. Capacitar el recurso humano estableciendo procesos de calidad en
+                        cada sector de la empresa.</nz-timeline-item>
+                </nz-timeline>
+            </nz-timeline-item>
+        </nz-timeline>
     </div>
 </div>
