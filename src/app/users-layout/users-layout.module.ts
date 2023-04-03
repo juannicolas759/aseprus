@@ -9,11 +9,12 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-
+import { UsersModuleModule } from './modules/users-module/users-module.module';
 
 @NgModule({
   declarations: [
-    UserLayoutComponent
+    UserLayoutComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -23,7 +24,8 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
     NzMenuModule,
     FormsModule,
     HttpClientModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    UsersModuleModule
   ]
 })
 export class UsersLayoutModule { }

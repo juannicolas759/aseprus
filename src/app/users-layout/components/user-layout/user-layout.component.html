@@ -9,7 +9,7 @@
       <li nz-menu-item>Material</li>
       <li nz-menu-item>Foros</li>
       <li nz-menu-item>Servicios</li>
-      <li nz-menu-item>Contacto</li>
+      <li nz-menu-item [routerLink]="['/api/about-us']">Contacto</li>
 
     </ul>
   </nz-header>
@@ -21,12 +21,11 @@
       <nz-breadcrumb-item>
         <a>
           <span nz-icon nzType="user"></span>
-          <span>Application List</span>
+          <span>Contacto</span>
         </a>
       </nz-breadcrumb-item>
-      <nz-breadcrumb-item>Application</nz-breadcrumb-item>
     </nz-breadcrumb>
-    <div class="inner-content">Content</div>
+    <div class="inner-content"><router-outlet></router-outlet></div>
   </nz-content>
   <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
 </nz-layout>
