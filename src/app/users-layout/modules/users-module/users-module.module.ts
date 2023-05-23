@@ -7,10 +7,25 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { ClassroomComponent } from './classroom/classroom.component';
+import { MaterialComponent } from './material/material.component';
+import { ClassListComponent } from './class-list/class-list.component';
+import { ClassPresentationComponent } from './class-presentation/class-presentation.component';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import { NzStatisticModule } from 'ng-zorro-antd/statistic';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 
 @NgModule({
   declarations: [
-    AboutUsComponent
+    AboutUsComponent,
+    ClassroomComponent,
+    MaterialComponent,
+    ClassListComponent,
+    ClassPresentationComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +33,14 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
     NzGridModule,
     NzTimelineModule,
     NzListModule,
-    NzLayoutModule
+    NzLayoutModule,
+    NzPageHeaderModule,
+    NzSpaceModule,
+    NzDescriptionsModule,
+    NzStatisticModule,
+    NzButtonModule,
+    NzCardModule,
+    NzAvatarModule
   ]
 })
 export class UsersModuleModule { }

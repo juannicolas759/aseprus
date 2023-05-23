@@ -1,20 +1,25 @@
 .myImg {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 nz-content {
-    padding: 0 50px;
-    margin-top: 64px;
-  }
+  padding: 0 50px;
+  margin-top: 64px;
+}
 
-  nz-breadcrumb {
-    margin: 16px 0;
-  }
+nz-breadcrumb {
+  margin: 16px 0;
+}
 
-  .inner-content {
-    background: #fff;
-    padding: 24px;
-    min-height: 380px;
-  }
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 380px;
+}
+
+.justify-text {
+  text-align: justify;
+  width: 100%;
+}

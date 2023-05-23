@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { UsersModuleModule } from './modules/users-module/users-module.module';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { UsersModuleModule } from './modules/users-module/users-module.module';
     FormsModule,
     HttpClientModule,
     NzBreadCrumbModule,
-    UsersModuleModule
+    UsersModuleModule, 
+    NzGridModule,
+    NzPageHeaderModule
   ]
 })
 export class UsersLayoutModule { }

@@ -1,0 +1,26 @@
+<nz-card nzTitle="Clases">
+    <div nz-row [nzGutter]="[24, 24]">
+        <div nz-col [nzSpan]="24" *ngFor="let item of data">
+            <nz-card style="" nzHoverable
+                [nzActions]="[actionEllipsis]" >
+                <nz-card-meta nzTitle="{{item.title}}" nzDescription="{{item.description}}"
+                    [nzAvatar]="coverTemplate" [routerLink]="['/app/class-presentation/', item.idClass]"></nz-card-meta>
+            <br><p>{{item.warning}}</p></nz-card>
+            <ng-template #coverTemplate>
+                <img width="150" alt="Saber más" src="{{item.imgUrl}}" />
+            </ng-template>
+            <!-- <ng-template #coverTemplate>
+                <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
+            </ng-template> -->
+            <!-- <ng-template #actionSetting>
+                <span nz-icon nzType="setting"></span>
+            </ng-template>
+            <ng-template #actionEdit>
+                <span nz-icon nzType="edit"></span>
+            </ng-template> -->
+            <ng-template #actionEllipsis>
+                <span nz-icon nzType="ellipsis"></span>
+            </ng-template>
+        </div>
+    </div>
+</nz-card>

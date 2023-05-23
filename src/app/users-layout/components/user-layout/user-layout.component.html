@@ -1,21 +1,24 @@
 <nz-layout class="layout">
   <nz-header>
-    <div class="logo">
-      <img src="../assets/Screenshot_188.png" alt="logo">
-    </div>
-    <ul nz-menu nzTheme="dark" nzMode="horizontal">
-      <li nz-menu-item>Inicio</li>
-      <li nz-menu-item>Clases</li>
-      <li nz-menu-item>Material</li>
-      <li nz-menu-item>Foros</li>
-      <li nz-menu-item>Servicios</li>
-      <li nz-menu-item [routerLink]="['/api/about-us']">Contacto</li>
-
-    </ul>
+    <nz-row>
+      <div class="logo">
+        <img src="../assets/Screenshot_188.png" alt="logo">
+      </div>
+      <div nz-col nzOffset="9">
+        <ul nz-menu nzTheme="dark" nzMode="horizontal">
+          <li nz-menu-item>Inicio</li>
+          <li nz-menu-item [routerLink]="['/api/class-list']">Clases</li>
+          <li nz-menu-item [routerLink]="['/api/material']">Material</li>
+          <li nz-menu-item>Foros</li>
+          <li nz-menu-item>Servicios</li>
+          <li nz-menu-item [routerLink]="['/api/about-us']">Contacto</li>
+        </ul>
+      </div>
+    </nz-row>
   </nz-header>
   <nz-content>
     <nz-breadcrumb>
-      <nz-breadcrumb-item>
+      <!-- <nz-breadcrumb-item>
         <span nz-icon nzType="home"></span>
       </nz-breadcrumb-item>
       <nz-breadcrumb-item>
@@ -23,7 +26,7 @@
           <span nz-icon nzType="user"></span>
           <span>Contacto</span>
         </a>
-      </nz-breadcrumb-item>
+      </nz-breadcrumb-item> -->
     </nz-breadcrumb>
     <div class="inner-content"><router-outlet></router-outlet></div>
   </nz-content>

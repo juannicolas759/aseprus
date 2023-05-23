@@ -1,0 +1,33 @@
+<nz-card *ngFor="let item of data">
+    <nz-page-header class="site-page-header">
+        <nz-page-header-title>{{item.title}}</nz-page-header-title>
+        <nz-page-header-extra>
+            <nz-space>
+                <!-- <button *nzSpaceItem nz-button>Operation</button> -->
+                <!-- <button *nzSpaceItem nz-button>Operation</button> -->
+                <!-- <button *nzSpaceItem nz-button nzType="primary">Comprar</button> -->
+            </nz-space>
+        </nz-page-header-extra>
+        <nz-page-header-content>
+            <nz-page-header-subtitle>Medios de pago</nz-page-header-subtitle>
+            <div class="content">
+                <div class="main">
+                    <nz-descriptions nzSize="small" [nzColumn]="2" *ngFor="let pay of item.payMethods">
+                        <nz-descriptions-item nzTitle="{{pay.name}}" [nzSpan]="1">
+                            {{pay.number}}
+                        </nz-descriptions-item>
+                    </nz-descriptions>
+                    <p nz-paragraph>Solicita el acceso al correo <a>aseprusboyaca@gmail.com</a> adjuntando el comprobante de pago.</p>
+                </div>
+                <div class="extra">
+                    <div>
+                        <nz-statistic nzTitle="Precio" [nzValue]="item.price" nzPrefix="$"
+                            style="margin: 0 32px"></nz-statistic>
+                    </div>
+                </div>
+            </div>
+        </nz-page-header-content>
+        <nz-page-header-footer>
+        </nz-page-header-footer>
+    </nz-page-header>
+</nz-card>
