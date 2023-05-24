@@ -1,0 +1,9 @@
+.bord {
+    border: 1px solid #B6D14B;
+    border-radius: 10px;
+}
+
+[nz-button] {
+    margin-right: 8px;
+    margin-bottom: 12px;
+}

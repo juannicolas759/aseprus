@@ -14,6 +14,12 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 
+// import { IconDefinition } from '@ant-design/icons-angular';
+// import { NzIconModule } from 'ng-zorro-antd/icon';
+
+// import { AccountBookFill, AlertFill, AlertOutline, PlusCircleFill, MinusCircleFill, PlusOutline, MinusCircleOutline, MinusOutline, EyeInvisibleOutline, EyeOutline, StarOutline } from '@ant-design/icons-angular/icons';
+// const icons: IconDefinition[] = [ AccountBookFill, AlertOutline, AlertFill, PlusCircleFill, MinusCircleFill, PlusOutline,MinusCircleOutline, MinusOutline,  EyeInvisibleOutline, EyeOutline, StarOutline ];
+
 registerLocaleData(es);
 
 @NgModule({

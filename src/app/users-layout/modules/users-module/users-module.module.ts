@@ -18,6 +18,10 @@ import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
     NzStatisticModule,
     NzButtonModule,
     NzCardModule,
-    NzAvatarModule
+    NzAvatarModule,
+    NzDividerModule,
+    NzIconModule,
+    NzTableModule,
+    NzModalModule
   ]
 })
 export class UsersModuleModule { }

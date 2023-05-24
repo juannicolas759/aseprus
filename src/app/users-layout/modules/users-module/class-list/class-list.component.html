@@ -4,7 +4,7 @@
             <nz-card style="" nzHoverable
                 [nzActions]="[actionEllipsis]" >
                 <nz-card-meta nzTitle="{{item.title}}" nzDescription="{{item.description}}"
-                    [nzAvatar]="coverTemplate" [routerLink]="['/app/class-presentation/', item.idClass]"></nz-card-meta>
+                    [nzAvatar]="coverTemplate" [routerLink]="['/api/class-presentation/', item.idClass]"></nz-card-meta>
             <br><p>{{item.warning}}</p></nz-card>
             <ng-template #coverTemplate>
                 <img width="150" alt="Saber más" src="{{item.imgUrl}}" />

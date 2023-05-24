@@ -8,9 +8,11 @@ import { ClassPresentationComponent } from './class-presentation/class-presentat
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
+  { path: '', component: AboutUsComponent},
   { path: 'classroom', component: ClassroomComponent},
   { path: 'class-list', component: ClassListComponent},
-  { path: 'class-presentation:id', component: ClassPresentationComponent},
+  { path: 'class-presentation/1', component: ClassPresentationComponent},
+  { path: 'class-presentation/2', component: ClassPresentationComponent},
   { path: 'material', component: MaterialComponent}
 ];
 
