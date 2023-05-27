@@ -13,6 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 // import { IconDefinition } from '@ant-design/icons-angular';
 // import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -34,7 +39,11 @@ registerLocaleData(es);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NzButtonSize } from 'ng-zorro-antd/button';
 import { NzModalService } from 'ng-zorro-antd/modal';
+import { Storage, ref, getDownloadURL} from '@angular/fire/storage';
 
 declare var YT: any;
 
@@ -25,6 +26,7 @@ interface Plan {
 })
 export class ClassPresentationComponent {
 
+
   videoUrl = '';
   player: any;
   data: ItemData[] = [];
@@ -35,67 +37,83 @@ export class ClassPresentationComponent {
     {
       key: '1',
       quantity: 3,
-      price: '35000',
+      price: '25000',
     }, {
       key: '2',
       quantity: 3,
-      price: '69000',
+      price: '49000',
     }, {
       key: '3',
       quantity: 3,
-      price: '102000',
+      price: '72000',
     }, {
       key: '4',
       quantity: 3,
-      price: '133000',
+      price: '93000',
     }, {
       key: '5',
       quantity: 3,
-      price: '164000',
+      price: '114000',
     }, {
       key: '6',
       quantity: 3,
-      price: '194000',
+      price: '134000',
     }, {
       key: '7',
       quantity: 3,
-      price: '222000',
+      price: '152000',
     }, {
       key: '8',
       quantity: 3,
-      price: '250000',
+      price: '170000',
     },
   ];
 
-  constructor(private modal: NzModalService) { }
+  constructor(private modal: NzModalService, private storage: Storage) { }
 
-  ngOnInit(): void {
+
+  ngOnInit(){
     this.loadData(1);
-    this.createPlayer();
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(tag);
+    console.log(this.videoUrl.length)
+    this.getVideo();
+    console.log(this.videoUrl.length)
+    // this.createPlayer();
+    // const tag = document.createElement('script');
+    // tag.src = 'https://www.youtube.com/iframe_api';
+    // document.body.appendChild(tag);
   }
+  
 
-  createPlayer(): void {
-    this.player = new YT.Player('player', {
-      height: '480px',
-      width: '100%',
-      videoId: 'qj5XWXCc2-I',
-      playerVars: {
-        autoplay: 1,
-        controls: 1,
-        showinfo: 0,
-        rel: 0,
-      },
-      events: {
-        'onReady': this.onPlayerReady.bind(this),
-      },
-    });
-  }
+  // createPlayer(): void {
+  //   this.player = new YT.Player('player', {
+  //     height: '480px',
+  //     width: '100%',
+  //     videoId: 'qj5XWXCc2-I',
+  //     playerVars: {
+  //       autoplay: 1,
+  //       controls: 1,
+  //       showinfo: 0,
+  //       rel: 0,
+  //     },
+  //     events: {
+  //       'onReady': this.onPlayerReady.bind(this),
+  //     },
+  //   });
+  // }
 
-  onPlayerReady(event: any): void {
-    event.target.playVideo();
+  // onPlayerReady(event: any): void {
+  //   event.target.playVideo();
+  // }
+
+  getVideo() {
+    const videoRef = ref(this.storage, '/Civil_3D_basico/Clase 5/Clase 5 - Diseño en Planta.mp4');
+    getDownloadURL(videoRef).then(respose => {
+      console.log('Video URL:', respose);
+      this.videoUrl = respose;
+    console.log(this.videoUrl.length)
+
+
+    }).catch(error => console.error());
   }
 
   info(): void {

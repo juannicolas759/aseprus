@@ -2,7 +2,14 @@
     <div nz-col class="gutter-row " [nzSpan]="15">
         <div nz-row [nzGutter]="[24, 24]">
             <div nz-col class="gutter-row " [nzSpan]="24">
-                <video id="player" src=""></video>
+                <!-- <video id="player" src=""></video> -->
+                <!-- <ng-component *ngIf="videoUrl.length<1"> -->
+                    <video controls width="100%" height="480px"> 
+                        <source src="{{videoUrl}}" type="">
+                        Your browser doesn't support HTML5 video.
+                      </video>
+                      {{videoUrl}}
+                <!-- </ng-component> -->
             </div>
 
         </div>
