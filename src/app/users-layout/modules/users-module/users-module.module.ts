@@ -22,6 +22,10 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { ClassAdsComponent } from './class-ads/class-ads.component';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { ResultComponent } from './result/result.component';
+import { NzResultModule } from 'ng-zorro-antd/result';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     ClassroomComponent,
     MaterialComponent,
     ClassListComponent,
-    ClassPresentationComponent
+    ClassPresentationComponent,
+    ClassAdsComponent,
+    ResultComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +54,9 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzDividerModule,
     NzIconModule,
     NzTableModule,
-    NzModalModule
+    NzModalModule,
+    NzSpinModule,
+    NzResultModule
   ]
 })
 export class UsersModuleModule { }

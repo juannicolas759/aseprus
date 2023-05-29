@@ -30,6 +30,7 @@ export class ClassPresentationComponent {
   videoUrl = '';
   player: any;
   data: ItemData[] = [];
+  loaded: boolean = false;
 
   size: NzButtonSize = 'large';
 
@@ -73,10 +74,8 @@ export class ClassPresentationComponent {
 
 
   ngOnInit(){
-    this.loadData(1);
-    console.log(this.videoUrl.length)
     this.getVideo();
-    console.log(this.videoUrl.length)
+    this.loadData(1);
     // this.createPlayer();
     // const tag = document.createElement('script');
     // tag.src = 'https://www.youtube.com/iframe_api';
@@ -106,11 +105,12 @@ export class ClassPresentationComponent {
   // }
 
   getVideo() {
-    const videoRef = ref(this.storage, '/Civil_3D_basico/Clase 5/Clase 5 - Diseño en Planta.mp4');
+    const videoRef = ref(this.storage, '/Civil_3D_basico/Clase 1 - Configuración inicial, interfaz y sistemas de coordenadas.mp4');
     getDownloadURL(videoRef).then(respose => {
       console.log('Video URL:', respose);
       this.videoUrl = respose;
-    console.log(this.videoUrl.length)
+      this.loaded = true;
+    console.log(this.videoUrl)
 
 
     }).catch(error => console.error());

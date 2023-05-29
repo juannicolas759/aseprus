@@ -12,11 +12,11 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { UsersModuleModule } from './modules/users-module/users-module.module';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { SafePipe } from '../pipes/safe.pipe';
 
 @NgModule({
   declarations: [
-    UserLayoutComponent,
-    
+    UserLayoutComponent
   ],
   imports: [
     CommonModule,

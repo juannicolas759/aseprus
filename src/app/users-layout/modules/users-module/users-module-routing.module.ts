@@ -5,6 +5,8 @@ import { ClassroomComponent } from './classroom/classroom.component';
 import { MaterialComponent } from './material/material.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { ClassPresentationComponent } from './class-presentation/class-presentation.component';
+import { ClassAdsComponent } from './class-ads/class-ads.component';
+import { ResultComponent } from './result/result.component';
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
@@ -12,8 +14,9 @@ const routes: Routes = [
   { path: 'classroom', component: ClassroomComponent},
   { path: 'class-list', component: ClassListComponent},
   { path: 'class-presentation/1', component: ClassPresentationComponent},
-  { path: 'class-presentation/2', component: ClassPresentationComponent},
-  { path: 'material', component: MaterialComponent}
+  { path: 'class-presentation/2', component: ClassAdsComponent},
+  { path: 'material', component: MaterialComponent},
+  { path: 'ups', component: ResultComponent}
 ];
 
 @NgModule({

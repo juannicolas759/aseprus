@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Embedded PDF Example</title>
+</head>
+<body>
+    <ng-container *ngIf="loaded">
+        <!-- <embed [src]="trustedPdfUrl" width="800px" height="1000px" /> -->
+        <iframe [src]="trustedPdfUrl" width="100%" height="1000px"></iframe>
+    </ng-container>
+</body>
+</html>

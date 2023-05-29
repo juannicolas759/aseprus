@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "aseprus-ab1c5": {
+      "hosting": {
+        "aseprus": [
+          "aseprus-ab1c5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "aseprus-ab1c5"
+  }
+}

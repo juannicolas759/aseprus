@@ -18,6 +18,8 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { SafePipe } from './pipes/safe.pipe';
+
 
 // import { IconDefinition } from '@ant-design/icons-angular';
 // import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -29,8 +31,7 @@ registerLocaleData(es);
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
