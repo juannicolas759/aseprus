@@ -11,7 +11,7 @@ import { ResultComponent } from './result/result.component';
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: '', component: AboutUsComponent},
-  { path: 'classroom', component: ClassroomComponent},
+  { path: 'classroom/:id', component: ClassroomComponent},
   { path: 'class-list', component: ClassListComponent},
   { path: 'class-presentation/1', component: ClassPresentationComponent},
   { path: 'class-presentation/2', component: ClassAdsComponent},

@@ -105,7 +105,7 @@ export class ClassPresentationComponent {
   // }
 
   getVideo() {
-    const videoRef = ref(this.storage, '/Civil_3D_basico/Clase 1 - Configuración inicial, interfaz y sistemas de coordenadas.mp4');
+    const videoRef = ref(this.storage, '/Civil_3D_basico/presentacion.mp4');
     getDownloadURL(videoRef).then(respose => {
       console.log('Video URL:', respose);
       this.videoUrl = respose;
@@ -126,7 +126,7 @@ export class ClassPresentationComponent {
 
   loadData(pi: number): void {
     this.data = [{
-      href: '#',
+      href: '1',
       title: `Clase 1: Configuración inicial, interfaz y sistemas de coordenadas.`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: 'Se presenta la configuración inicial que debe hacerse en el equipo para el uso de Civil 3D.',
@@ -135,14 +135,14 @@ export class ClassPresentationComponent {
         'la metodología para geolocalizar un proyecto haciendo énfasis en los principales sistemas de coordenadas usados en proyectos de Colombia.'
     },
     {
-      href: '#',
+      href: '2',
       title: `Clase 2: Interfaz y comandos básicos de dibujo de AutoCAD`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: 'La clase presenta procedimientos básicos de dibujo en AutoCAD, capas, bloques, comandos y configuración de acuerdo a INVIAS.',
       content:
         'Su principal aplicación radica en tener bases suficientes para manejos posteriores en topografía y diseño geométrico de vías.'
     }, {
-      href: '#',
+      href: '3',
       title: `Clase 3: Interfaz y puntos topográficos en Civil 3D.`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: 'Cajas de herramientas y ventanas dentro de Civil 3D.',
@@ -150,7 +150,7 @@ export class ClassPresentationComponent {
         'Introducción inicial a las funciones, pestañas, cajas de herramientas y ventanas dentro de Civil 3D, así como el concepto, cargue y edición de puntos topográficos al software'
     },
     {
-      href: '#',
+      href: '4',
       title: `Clase 4: Superficies y explanaciones`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: 'Superficies en Civil 3D.',
@@ -158,7 +158,7 @@ export class ClassPresentationComponent {
         'Creación de superficies a partir de puntos y curvas de nivel, edición de superficies, introducción a líneas características y generación de explanaciones.'
     },
     {
-      href: '#',
+      href: '5',
       title: `Clase 5: Diseño en Planta`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: ' ',
@@ -166,7 +166,7 @@ export class ClassPresentationComponent {
         'Definición de un alineamiento, revisión de conceptos de normatividad, diseño de curvas circulares y espiralizadas, definición y generación de peralte, edición de estilos y etiquetas en planta'
     },
     {
-      href: '#',
+      href: '6',
       title: `Clase 6: Diseño en Perfil`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: '',
@@ -174,7 +174,7 @@ export class ClassPresentationComponent {
         'Definición de la rasante, revisión de conceptos de normatividad, diseño de curvas verticales, edición de estilos y etiquetas en perfil.'
     },
     {
-      href: '#',
+      href: '7',
       title: `Clase 7: Diseño en Sección y Corredor`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: '',
@@ -182,7 +182,7 @@ export class ClassPresentationComponent {
         'Diseño de la sección transversal, revisión de conceptos de normatividad y generación del corredor.'
     },
     {
-      href: '#',
+      href: '8',
       title: `Clase 8: Presentación de planos y escalas`,
       avatar: '../assets/LOGO-RECORTADO.png',
       description: ' ',
