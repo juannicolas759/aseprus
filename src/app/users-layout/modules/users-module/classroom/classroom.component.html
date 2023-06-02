@@ -4,7 +4,7 @@
             <div nz-col class="gutter-row " [nzSpan]="24">
                 <!-- <video id="player" src=""></video> -->
                 <ng-container *ngIf="loaded; else elseBlock">
-                    <video controls autoplay width="100%" height="480px"> 
+                    <video controls autoplay width="100%" height="480px" controlsList="nodownload" oncontextmenu="return false;"> 
                         <source src="{{videoUrl}}" type="">
                         Your browser doesn't support this content.
                       </video>

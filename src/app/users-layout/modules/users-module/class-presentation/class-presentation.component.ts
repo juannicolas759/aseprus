@@ -107,13 +107,12 @@ export class ClassPresentationComponent {
   getVideo() {
     const videoRef = ref(this.storage, '/Civil_3D_basico/presentacion.mp4');
     getDownloadURL(videoRef).then(respose => {
-      console.log('Video URL:', respose);
       this.videoUrl = respose;
       this.loaded = true;
-    console.log(this.videoUrl)
 
 
-    }).catch(error => console.error());
+    }).catch(error => console.log('error'));
+   
   }
 
   info(): void {

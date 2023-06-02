@@ -101,7 +101,7 @@ export class ClassroomComponent implements OnInit, OnDestroy {
       this.videoUrl = respose;
       this.loaded = true;
 
-    }).catch(error => console.error());
+    }).catch(error => console.log('error'));
   }
 
   info(): void {
